@@ -55,6 +55,12 @@ function Login() {
       if (response.data) {
         // AsyncStorage에 사용자 정보 저장
         await AsyncStorage.setItem("user", JSON.stringify(response.data));
+        Alert.alert(
+          "성공",
+          "부모 로그인 테스트 성공",
+          [{ text: "확인", onPress: () => console.log("확인 클릭") }],
+          { cancelable: false }
+        );
         // navigation.navigate("Main"); // 로그인 성공 후 메인 페이지로 이동
       } else {
         Alert.alert(
@@ -97,6 +103,12 @@ function Login() {
       if (response.data) {
         // AsyncStorage에 사용자 정보 저장
         await AsyncStorage.setItem("user", JSON.stringify(response.data));
+        Alert.alert(
+          "성공",
+          "아이 로그인 테스트 성공",
+          [{ text: "확인", onPress: () => console.log("확인 클릭") }],
+          { cancelable: false }
+        );
         // navigation.navigate("Main"); // 로그인 성공 후 메인 페이지로 이동
       } else {
         Alert.alert(
