@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, Alert, StyleSheet } from "react-native";
-// import axios from "axios";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import axios from "axios";
 // import { useNavigation } from "@react-navigation/native";
 // import Swal from "sweetalert2";
 
@@ -35,7 +36,7 @@ function Login() {
     try {
       const loginData = { parentId, password };
 
-      if (parentId.length === 0 || password === 0) {
+      if (parentId.length === 0 || password.length === 0) {
         Alert.alert(
           "알림",
           "모든 항목을 입력해주세요.",
@@ -45,11 +46,16 @@ function Login() {
         return;
       }
 
-      const response = await axios.post("/parents/login", loginData);
+      const response = await axios.post(
+        "http://172.30.1.8:8080/parents/login", // 백엔드 서버의 주소
+        loginData
+      );
+
       // 로그인 성공 후의 처리
       if (response.data) {
-        localStorage.setItem("user", JSON.stringify(response.data));
-        navigation.navigate("Main"); // 로그인 성공 후 메인 페이지로 이동
+        // AsyncStorage에 사용자 정보 저장
+        await AsyncStorage.setItem("user", JSON.stringify(response.data));
+        // navigation.navigate("Main"); // 로그인 성공 후 메인 페이지로 이동
       } else {
         Alert.alert(
           "알림",
@@ -62,8 +68,8 @@ function Login() {
       // 로그인 실패 후의 처리
       Alert.alert(
         "로그인 실패",
-        "서버 오류가 발생했습니다. 다시 시도해주세요.",
-        [{ text: "확인", onPress: () => console.log("확인 클릭") }]
+        "서버 오류가 발생했습니다. 다시 시도해주세요."
+        // [{ text: "확인", onPress: () => console.log("확인 클릭") }]
       );
     }
   };
@@ -82,12 +88,16 @@ function Login() {
         );
         return;
       }
+      const response = await axios.post(
+        "http://172.30.1.8:8080/children/login", // 백엔드 서버의 주소
+        loginData
+      );
 
-      const response = await axios.post("/children/login", loginData);
       // 로그인 성공 후의 처리
       if (response.data) {
-        localStorage.setItem("user", JSON.stringify(response.data));
-        navigation.navigate("Main"); // 로그인 성공 후 메인 페이지로 이동
+        // AsyncStorage에 사용자 정보 저장
+        await AsyncStorage.setItem("user", JSON.stringify(response.data));
+        // navigation.navigate("Main"); // 로그인 성공 후 메인 페이지로 이동
       } else {
         Alert.alert(
           "알림",
