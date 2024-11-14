@@ -10,7 +10,7 @@
 <br/>
 
 # 24.11.14
-# 회원가입 타입 체크 + 아이/부모 별 회원가입 완료
+## 회원가입 타입 체크 + 아이/부모 별 회원가입 완료
 <img src = "https://github.com/user-attachments/assets/eafa1f1c-4036-40dd-965f-6fe5cc968f31" width = 250 height= 520 />
 <img src = "https://github.com/user-attachments/assets/685887c6-179b-47cf-9455-4d8c25138c9e" width = 250 height= 520 />
 <img src = "https://github.com/user-attachments/assets/ec2aa070-1e2d-4966-975d-b8c422abab55" width = 250 height= 520 />
