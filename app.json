@@ -16,13 +16,28 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.hongchangi.isfinapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "config": {
+        "cleartextTraffic": true
       }
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "47ac7c9e-b9b5-499f-ae93-59b6cf8398d7"
+      }
+    },
+    "packagerOpts": {
+      "dev": true,
+      "minify": false,
+      "https": false,
+      "lan": true
     }
   }
 }

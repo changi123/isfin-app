@@ -47,8 +47,8 @@ function Login() {
       }
 
       const response = await axios.post(
-        // "http://172.30.1.8:8080/parents/login", // 백엔드 서버의 주소
-        "http://192.168.219.127:8080/parents/login", // 백엔드 서버의 주소
+        "http://172.30.1.85:8080/parents/login", // 백엔드 서버의 주소
+        // "http://192.168.219.127:8080/parents/login", // 백엔드 서버의 주소
 
         loginData
       );
@@ -99,8 +99,8 @@ function Login() {
       }
 
       const response = await axios.post(
-        // "http://172.30.1.8:8080/children/login", // 백엔드 서버의 주소
-        "http://192.168.219.127:8080/children/login", // 백엔드 서버의 주소
+        "http://172.30.1.85:8080/children/login", // 백엔드 서버의 주소
+        // "http://192.168.219.127:8080/children/login", // 백엔드 서버의 주소
         loginData
       );
 
