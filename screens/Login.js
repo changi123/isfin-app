@@ -47,13 +47,16 @@ function Login() {
       }
 
       const response = await axios.post(
-        "http://172.30.1.8:8080/parents/login", // 백엔드 서버의 주소
+        // "http://172.30.1.8:8080/parents/login", // 백엔드 서버의 주소
+        "http://192.168.219.127:8080/parents/login", // 백엔드 서버의 주소
+
         loginData
       );
 
       // 로그인 성공 후의 처리
       if (response.data) {
         // AsyncStorage에 사용자 정보 저장
+
         await AsyncStorage.setItem("user", JSON.stringify(response.data));
         Alert.alert(
           "성공",
@@ -94,8 +97,10 @@ function Login() {
         );
         return;
       }
+
       const response = await axios.post(
-        "http://172.30.1.8:8080/children/login", // 백엔드 서버의 주소
+        // "http://172.30.1.8:8080/children/login", // 백엔드 서버의 주소
+        "http://192.168.219.127:8080/children/login", // 백엔드 서버의 주소
         loginData
       );
 
