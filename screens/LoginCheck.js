@@ -30,6 +30,13 @@ const LoginCheck = ({ navigation }) => {
         <Text style={styles.buttonText}>회원가입</Text>
       </TouchableOpacity>
 
+      <TouchableOpacity
+        style={styles.button1}
+        onPress={() => navigation.navigate("IsfinMain")}
+      >
+        <Text style={styles.buttonText}>서비스 둘러보기</Text>
+      </TouchableOpacity>
+
       {/* 이미지 */}
       <View style={styles.imageBox}>
         <Image style={styles.image} />
@@ -65,7 +72,7 @@ const styles = StyleSheet.create({
   },
   button1: {
     backgroundColor: "#ffffff",
-    width: 130,
+    width: 150,
     height: 50,
     borderRadius: 20,
     justifyContent: "center",
@@ -75,7 +82,7 @@ const styles = StyleSheet.create({
   },
   button2: {
     backgroundColor: "#ffffff",
-    width: 130,
+    width: 150,
     height: 50,
     borderRadius: 20,
     justifyContent: "center",

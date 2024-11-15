@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { View, Text, TextInput, Button, Alert, StyleSheet } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
-// import { useNavigation } from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
 // import Swal from "sweetalert2";
 
 function Login() {
-  //   const navigation = useNavigation();
+  const navigation = useNavigation();
 
   //   // 로그인 타입 상태
   const [loginType, setLoginType] = useState("parent");
@@ -48,23 +48,14 @@ function Login() {
 
       const response = await axios.post(
         "http://172.30.1.85:8080/parents/login", // 백엔드 서버의 주소
-        // "http://192.168.219.127:8080/parents/login", // 백엔드 서버의 주소
-
         loginData
       );
 
       // 로그인 성공 후의 처리
       if (response.data) {
         // AsyncStorage에 사용자 정보 저장
-
         await AsyncStorage.setItem("user", JSON.stringify(response.data));
-        Alert.alert(
-          "성공",
-          "부모 로그인 테스트 성공",
-          [{ text: "확인", onPress: () => console.log("확인 클릭") }],
-          { cancelable: false }
-        );
-        // navigation.navigate("Main"); // 로그인 성공 후 메인 페이지로 이동
+        navigation.navigate("IsfinMain");
       } else {
         Alert.alert(
           "알림",
@@ -77,8 +68,9 @@ function Login() {
       // 로그인 실패 후의 처리
       Alert.alert(
         "로그인 실패",
-        "서버 오류가 발생했습니다. 다시 시도해주세요."
-        // [{ text: "확인", onPress: () => console.log("확인 클릭") }]
+        "서버 오류가 발생했습니다. 다시 시도해주세요."[
+          { text: "확인", onPress: () => console.log("확인 클릭") }
+        ]
       );
     }
   };
@@ -100,7 +92,6 @@ function Login() {
 
       const response = await axios.post(
         "http://172.30.1.85:8080/children/login", // 백엔드 서버의 주소
-        // "http://192.168.219.127:8080/children/login", // 백엔드 서버의 주소
         loginData
       );
 
@@ -108,13 +99,7 @@ function Login() {
       if (response.data) {
         // AsyncStorage에 사용자 정보 저장
         await AsyncStorage.setItem("user", JSON.stringify(response.data));
-        Alert.alert(
-          "성공",
-          "아이 로그인 테스트 성공",
-          [{ text: "확인", onPress: () => console.log("확인 클릭") }],
-          { cancelable: false }
-        );
-        // navigation.navigate("Main"); // 로그인 성공 후 메인 페이지로 이동
+        navigation.navigate("IsfinMain");
       } else {
         Alert.alert(
           "알림",

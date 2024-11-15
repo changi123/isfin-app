@@ -42,12 +42,16 @@ function Register2() {
       try {
         const response = await axios.post(
           "http://172.30.1.85:8080/parents/createParents", // 백엔드 서버의 주소
-          // "http://192.168.219.127:8080/parents/createParents", // 백엔드 서버의 주소
           data
         );
 
         if (response.data) {
-          Alert.alert("알림", "부모 회원가입 성공");
+          Alert.alert("알림", "로그인 해주세요!", [
+            {
+              text: "확인",
+              onPress: () => navigation.navigate("Login"), // Login 화면으로 이동
+            },
+          ]);
         } else {
           Alert.alert("알림", "이미 가입된 아이디 입니다.");
         }
@@ -69,12 +73,16 @@ function Register2() {
       try {
         const response = await axios.post(
           "http://172.30.1.85:8080/children/createChild", // 백엔드 서버의 주소
-          // "http://192.168.219.127:8080/children/createChild", // 백엔드 서버의 주소
           data
         );
 
         if (response.data) {
-          Alert.alert("알림", "아이 회원가입 성공");
+          Alert.alert("알림", "로그인 해주세요!", [
+            {
+              text: "확인",
+              onPress: () => navigation.navigate("Login"), // Login 화면으로 이동
+            },
+          ]);
         } else {
           Alert.alert("알림", "이미 가입된 아이디 입니다.");
         }
