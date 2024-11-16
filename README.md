@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/79acb20d-2d93-4c05-8034-0fabe9cc3ef2)#  🚗 이전 아이스핀 ( ISFIN ) 리액트 프로젝트 -> 리액트 네이티브 + 안드로이드 스튜디오 프로젝트로 변환하기 
+#  🚗 이전 아이스핀 ( ISFIN ) 리액트 프로젝트 -> 리액트 네이티브 + 안드로이드 스튜디오 프로젝트로 변환하기 
 <br/>
 
 # 24.11.13
