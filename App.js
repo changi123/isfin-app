@@ -8,6 +8,7 @@ import Login from "./screens/Login";
 import Register from "./screens/Register";
 import Register2 from "./screens/Register2";
 import IsfinMain from "./screens/IsfinMain";
+import CardMain from "./screens/CardMain";
 
 const Stack = createStackNavigator();
 
@@ -40,6 +41,11 @@ export default function App() {
           <Stack.Screen
             name="IsfinMain"
             component={IsfinMain}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="card"
+            component={CardMain}
             options={{ headerShown: false }}
           />
           {/* 다른 스크린들 */}

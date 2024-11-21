@@ -53,53 +53,8 @@ const IsfinMain = () => {
   const handleNavigate = () => {
     // Navigation function
   };
-  const toCardMain = async () => {
-    try {
-      // AsyncStorage에서 사용자 정보 확인
-      const user = JSON.parse(await AsyncStorage.getItem("user"));
-      // 비로그인시
-      if (user === null) {
-        Alert.alert(
-          "알림",
-          "로그인을 해주세요!",
-          [{ text: "확인", onPress: () => navigation.navigate("Login") }],
-          { cancelable: false }
-        );
-      } else if (user.type === "0") {
-        // 카드 신청은 부모만 접근 가능
-        Alert.alert("알림", "부모님만 가능해요!", [{ text: "확인" }], {
-          cancelable: false,
-        });
-      } else {
-        // 부모가 맞다면
-        try {
-          const response = await axios.get(
-            `http://192.168.219.49:8080/mission/parents/${user.parentId}`
-          );
-          if (response.data.length === 0) {
-            Alert.alert(
-              "알림",
-              "카드 발급 / 카드 연동을 먼저 해주세요.",
-              [{ text: "확인", onPress: () => {} }],
-              { cancelable: false }
-            );
-            return;
-          }
-          const childList = response.data;
-          const defaultResponse = await axios.get(
-            `http://192.168.219.49:8080/mission/parents/todayChild/${childList[0].childId}`
-          );
-          navigation.navigate("MissionPage", {
-            childList: childList,
-            defaultResponse: defaultResponse.data,
-          });
-        } catch (error) {
-          console.error(error);
-        }
-      }
-    } catch (error) {
-      console.error("Error checking login status:", error);
-    }
+  const toCardMain = () => {
+    navigation.navigate("card");
   };
   // 퀴즈
   const checkQuiz = () => {
