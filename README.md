@@ -14,12 +14,21 @@
 | ![image1](https://github.com/user-attachments/assets/eafa1f1c-4036-40dd-965f-6fe5cc968f31) | ![image2](https://github.com/user-attachments/assets/685887c6-179b-47cf-9455-4d8c25138c9e) | ![image3](https://github.com/user-attachments/assets/ec2aa070-1e2d-4966-975d-b8c422abab55) |
 |---|---|---|
 
+<br/>
+
+
 # 24.11.15
 ## 메인화면 구성 ( 카드신청하기 + 오늘의 미션 + 퀴즈/동영상 )
 
 | ![image1](https://github.com/user-attachments/assets/3e939df8-f054-4af0-8708-28147e924b79) | ![image2](https://github.com/user-attachments/assets/739dd7cc-894e-498b-b0e1-0c800528e40f) | ![image3](https://github.com/user-attachments/assets/ab49ff76-42ea-4740-bf82-2b9e9fb6fe2b) |
 |---|---|---|
 
+<br/>
 
+
+
+# 24.11.21
+## 카드 목록 ( 카드 목록 페이지 다음 -> 카드 신청 + 카드 연동하기 )
+ <img src="https://github.com/user-attachments/assets/3b27d6b2-4c3d-41c2-b99c-795f0e01763e" width="300"> 
 
 
