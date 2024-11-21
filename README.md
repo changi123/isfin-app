@@ -29,7 +29,7 @@
 # 24.11.21
 ## 카드 목록 ( 카드 목록 페이지 )
 
-| ![image1](https://github.com/user-attachments/assets/c6cbd5f8-afa5-4fe7-a0f4-1525d454933d) 
+| ![image1](https://github.com/user-attachments/assets/c6cbd5f8-afa5-4fe7-a0f4-1525d454933d) |
 |---|---|---|
 
 
