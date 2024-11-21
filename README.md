@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/79acb20d-2d93-4c05-8034-0fabe9cc3ef2)#  🚗 이전 아이스핀 ( ISFIN ) 리액트 프로젝트 -> 리액트 네이티브 + 안드로이드 스튜디오 프로젝트로 변환하기 
+#  🚗 이전 아이스핀 ( ISFIN ) 리액트 프로젝트 -> 리액트 네이티브 + 안드로이드 스튜디오 프로젝트로 변환하기 
 <br/>
 
 # 24.11.13
@@ -13,7 +13,6 @@
 
 | ![image1](https://github.com/user-attachments/assets/eafa1f1c-4036-40dd-965f-6fe5cc968f31) | ![image2](https://github.com/user-attachments/assets/685887c6-179b-47cf-9455-4d8c25138c9e) | ![image3](https://github.com/user-attachments/assets/ec2aa070-1e2d-4966-975d-b8c422abab55) |
 |---|---|---|
-
 
 # 24.11.15
 ## 메인화면 구성 ( 카드신청하기 + 오늘의 미션 + 퀴즈/동영상 )
