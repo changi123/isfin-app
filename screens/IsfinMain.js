@@ -74,7 +74,7 @@ const IsfinMain = () => {
         // 부모가 맞다면
         try {
           const response = await axios.get(
-            `http://172.30.1.85:8080/mission/parents/${user.parentId}`
+            `http://192.168.219.49:8080/mission/parents/${user.parentId}`
           );
           if (response.data.length === 0) {
             Alert.alert(
@@ -87,7 +87,7 @@ const IsfinMain = () => {
           }
           const childList = response.data;
           const defaultResponse = await axios.get(
-            `http://172.30.1.85:8080/mission/parents/todayChild/${childList[0].childId}`
+            `http://192.168.219.49:8080/mission/parents/todayChild/${childList[0].childId}`
           );
           navigation.navigate("MissionPage", {
             childList: childList,
