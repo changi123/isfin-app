@@ -19,7 +19,6 @@
 
 # 24.11.15
 ## 메인화면 구성 ( 카드신청하기 + 오늘의 미션 + 퀴즈/동영상 )
-
 | ![image1](https://github.com/user-attachments/assets/3e939df8-f054-4af0-8708-28147e924b79) | ![image2](https://github.com/user-attachments/assets/739dd7cc-894e-498b-b0e1-0c800528e40f) | ![image3](https://github.com/user-attachments/assets/ab49ff76-42ea-4740-bf82-2b9e9fb6fe2b) |
 |---|---|---|
 
@@ -32,9 +31,9 @@
 
 
 # 24.11.22
-## 카드 신청 ( 자녀 등록 + 배송지 )
-| ![image1](https://github.com/user-attachments/assets/2fc83cc0-5b3b-49d2-9eb1-d30f9a9ab2f8) |  ![image2](https://github.com/user-attachments/assets/e96e20dd-617f-46dc-957f-2006d0ebf00a)  | ![image3](https://github.com/user-attachments/assets/07d63580-caa2-498b-aeab-d2ff01d7dbb9) |
-|---|---|
+## 카드 발급 ( 자녀 등록 + 배송지 + 계좌정보 )
+| ![image1](https://github.com/user-attachments/assets/2fc83cc0-5b3b-49d2-9eb1-d30f9a9ab2f8) | ![image2]([https://github.com/user-attachments/assets/739dd7cc-894e-498b-b0e1-0c800528e40f](https://github.com/user-attachments/assets/e96e20dd-617f-46dc-957f-2006d0ebf00a)) | ![image3]([https://github.com/user-attachments/assets/ab49ff76-42ea-4740-bf82-2b9e9fb6fe2b](https://github.com/user-attachments/assets/07d63580-caa2-498b-aeab-d2ff01d7dbb9)) |
+|---|---|---|
 <br/>
 
 
