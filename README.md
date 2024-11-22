@@ -25,10 +25,16 @@
 
 <br/>
 
-
-
 # 24.11.21
 ## 카드 목록 ( 카드 목록 페이지 다음 -> 카드 신청 + 카드 연동하기 )
  <img src="https://github.com/user-attachments/assets/3b27d6b2-4c3d-41c2-b99c-795f0e01763e" width="300"> 
+<br/>
+
+
+# 24.11.22
+## 카드 신청 ( 자녀 등록 )
+ <img src="https://github.com/user-attachments/assets/9f287998-3b58-4534-9ca4-956371249aa3" width="300"> 
+<br/>
+
 
 
