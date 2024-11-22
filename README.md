@@ -32,7 +32,7 @@
 
 # 24.11.22
 ## 카드 발급 ( 자녀 등록 + 배송지 + 계좌정보 )
-| ![image1](https://github.com/user-attachments/assets/2fc83cc0-5b3b-49d2-9eb1-d30f9a9ab2f8) | ![image2](https://github.com/user-attachments/assets/e96e20dd-617f-46dc-957f-2006d0ebf00a) | ![image3](https://github.com/user-attachments/assets/07d63580-caa2-498b-aeab-d2ff01d7dbb9) |
+| ![image1](https://github.com/user-attachments/assets/2fc83cc0-5b3b-49d2-9eb1-d30f9a9ab2f8) | ![image2](https://github.com/user-attachments/assets/e96e20dd-617f-46dc-957f-2006d0ebf00a) | ![image3](https://github.com/user-attachments/assets/2f2a495f-fe6c-418d-a2ed-aad3145502e2) |
 |---|---|---|
 <br/>
 
