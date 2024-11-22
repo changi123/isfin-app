@@ -75,16 +75,18 @@ function CardRegister(props) {
   };
 
   function nextPage() {
+    console.log("nextPage start");
     if (cntClick > 0 && !idNotification) {
       const card = {
         child: {
           childId: childId,
         },
         cardType: {
-          cardTypeId: cardInfo.cardId,
+          cardTypeId: cardInfo.cardTypeId,
         },
       };
-      navigation.navigate("CardRegisterCheck", { card: card });
+      console.log(card);
+      navigation.navigate("CardRegisterInfo", { card: card });
     } else {
       Alert.alert("알림", "아이디 확인을 해주세요", [{ text: "확인" }], {
         cancelable: false,
@@ -93,12 +95,14 @@ function CardRegister(props) {
   }
 
   function checkId() {
+    console.log("checkId start");
     if (childId === "") {
       setEmptyNotification(true);
     } else {
       axios
-        .get(`/cards/child/${childId}`)
+        .get(`http://172.30.1.94:8080/cards/child/${childId}`)
         .then((res) => {
+          console.log(res.data);
           if (res.data === "") {
             setIdNotification(true);
             setcntClick(cntClick + 1);
