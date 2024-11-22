@@ -43,6 +43,19 @@ function CardMain() {
       });
   }, []);
 
+  const handleCardRegister = (cardId) => {
+    // console.log(cardId);
+    axios
+      .get(`http://172.30.1.94:8080/card-list/detail/${cardId}`)
+      .then((res) => {
+        // console.log(res.data);
+        navigation.navigate("CardRegister", { cardInfo: res.data });
+      })
+      .catch((error) => {
+        console.error("서버 에러", error); // 오류 처리
+      });
+  };
+
   function toJoinPage() {
     if (checkUser === "1") {
       //   navigation.navigate("CardJoin");
@@ -100,11 +113,7 @@ function CardMain() {
             <TouchableOpacity
               key={index}
               style={styles.cardBox}
-              onPress={() =>
-                navigation.navigate("CardDetail", {
-                  cardTypeId: card.cardTypeId,
-                })
-              }
+              onPress={() => handleCardRegister(card.cardTypeId)}
             >
               <Image source={imageSource} style={styles.cardImage} />
               <Text style={styles.cardName}>
