@@ -21,10 +21,13 @@ const IsfinMain = () => {
   // 로그인 상태 확인 함수
   const checkLogin = async () => {
     const userData = await AsyncStorage.getItem("user");
+
     if (userData === null) {
       setUser(null);
+      console.log("로그인안함");
     } else {
       setUser(JSON.parse(userData));
+      console.log("로그인 정보 : " + userData);
     }
   };
 
@@ -68,6 +71,7 @@ const IsfinMain = () => {
   const handleSelect = async () => {
     // AsyncStorage에서 사용자 정보 확인
     const user = JSON.parse(await AsyncStorage.getItem("user"));
+
     // 비로그인
     if (user === null) {
       Alert.alert(
