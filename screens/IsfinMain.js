@@ -79,7 +79,7 @@ const IsfinMain = () => {
     }
     if (user.type === "0") {
       const defaultResponse = await axios.get(
-        `http://172.30.1.85:8080/mission/parents/todayChild/${user.childId}`
+        `http://172.30.1.94:8080/mission/parents/todayChild/${user.childId}`
       );
 
       // navigation.navigate("MissionPage", {

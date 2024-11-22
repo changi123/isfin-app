@@ -41,7 +41,7 @@ function Register2() {
 
       try {
         const response = await axios.post(
-          "http://192.168.219.49:8080/parents/createParents", // 백엔드 서버의 주소
+          "http://172.30.1.94:8080/parents/createParents", // 백엔드 서버의 주소
           data
         );
 
@@ -72,7 +72,7 @@ function Register2() {
       }
       try {
         const response = await axios.post(
-          "http://192.168.219.49:8080/children/createChild", // 백엔드 서버의 주소
+          "http://172.30.1.94:8080/children/createChild", // 백엔드 서버의 주소
           data
         );
 

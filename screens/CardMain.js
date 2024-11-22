@@ -27,16 +27,16 @@ function CardMain() {
     AsyncStorage.getItem("user").then((userData) => {
       if (userData) {
         const user = JSON.parse(userData);
-
         setCheckUser(user.type);
       }
     });
 
     // 카드 목록 요청
     axios
-      .get("http://192.168.219.49:8080/card-list")
+      .get("http://172.30.1.94:8080/card-list")
       .then((res) => {
         setCardList(res.data);
+        // console.log(res.data);
       })
       .catch((error) => {
         console.error("Error fetching card list: ", error);
