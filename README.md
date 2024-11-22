@@ -33,8 +33,7 @@
 
 # 24.11.22
 ## 카드 신청 ( 자녀 등록 )
- <img src="https://github.com/user-attachments/assets/9f287998-3b58-4534-9ca4-956371249aa3" width="300"> 
+ <img src="https://github.com/user-attachments/assets/c9b28d0e-b800-4211-88cf-0eaad72842cc" width="300"> 
 <br/>
-
 
 
