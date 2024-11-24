@@ -44,7 +44,10 @@
 </br>
 <img src="https://github.com/user-attachments/assets/b9260c98-7462-4727-921c-c514a9d00d0d" width="300"> 
 <img src="https://github.com/user-attachments/assets/a004e368-f1af-4990-84c9-4015a5d81db4" width="300"> 
-
+| ![image1](https://velog.velcdn.com/images/changi_gg/post/d69656d4-91be-4bbe-97a7-c22d3e677cc8/image.png) | ![image2](https://velog.velcdn.com/images/changi_gg/post/4025ce00-ac64-42a0-a5d3-716fab682786/image.png)
+|---|---|
+<img src="https://velog.velcdn.com/images/changi_gg/post/bfe370b7-60c0-42af-82c2-6ad5948546b6/image.png"> 
+-> 리워드가 잘 지급 된 것 확인
 <br/>
 
 
