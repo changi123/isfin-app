@@ -49,8 +49,10 @@
 
 <br> 
 
-<img src="https://velog.velcdn.com/images/changi_gg/post/d69656d4-91be-4bbe-97a7-c22d3e677cc8/image.png" width="300"> 
-<img src="https://velog.velcdn.com/images/changi_gg/post/4025ce00-ac64-42a0-a5d3-716fab682786/image.png" width="300"> 
+
+
+<img src="https://velog.velcdn.com/images/changi_gg/post/d69656d4-91be-4bbe-97a7-c22d3e677cc8" width="300"> 
+<img src="https://velog.velcdn.com/images/changi_gg/post/4025ce00-ac64-42a0-a5d3-716fab682786" width="300"> 
 
 <br>
 
