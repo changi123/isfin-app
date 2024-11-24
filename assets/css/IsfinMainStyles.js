@@ -1,0 +1,168 @@
+import { StyleSheet } from "react-native";
+
+const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+    padding: 50,
+    backgroundColor: "#f7f8fa",
+  },
+  header: {
+    alignItems: "center",
+    marginBottom: 20,
+  },
+  headerImage: {
+    width: 110,
+    height: 160,
+    borderRadius: 10,
+    marginTop: 30,
+  },
+  menuButton: {
+    position: "absolute",
+    right: 10,
+    top: -50,
+  },
+  mainContent: {
+    alignItems: "center",
+    marginTop: 30,
+    backgroundColor: "#fff",
+    padding: 20,
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 5,
+    marginBottom: 30,
+  },
+  mainTitle: {
+    fontSize: 26,
+    fontWeight: "bold",
+    color: "#333",
+  },
+  subTitle: {
+    fontSize: 18,
+    color: "#777",
+    marginVertical: 5,
+  },
+  mainImage: {
+    width: "90%",
+    height: 200,
+    borderRadius: 10,
+    resizeMode: "cover",
+  },
+  cardButton: {
+    marginVertical: 20,
+    padding: 15,
+    backgroundColor: "#007BFF",
+    borderRadius: 10,
+    width: "80%",
+    alignItems: "center",
+  },
+  cardButtonText: {
+    color: "#FFFFFF",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  missionSection: {
+    alignItems: "center",
+    marginTop: 30,
+    backgroundColor: "#fff",
+    padding: 20,
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 5,
+    marginBottom: 30,
+  },
+  sectionTitle: {
+    fontSize: 22,
+    fontWeight: "bold",
+    color: "#333",
+  },
+  missionSubtitle: {
+    fontSize: 16,
+    textAlign: "center",
+    color: "#555",
+    marginVertical: 8,
+  },
+  missionDescription: {
+    fontSize: 14,
+    textAlign: "center",
+    color: "#666",
+    marginVertical: 10,
+  },
+  missionImage: {
+    width: 250,
+    height: 150,
+    resizeMode: "contain",
+    marginVertical: 10,
+  },
+  missionButton: {
+    padding: 12,
+    backgroundColor: "#007BFF",
+    borderRadius: 5,
+    width: "80%",
+    alignItems: "center",
+    marginTop: 10,
+  },
+  missionButtonText: {
+    color: "#FFFFFF",
+    fontSize: 16,
+  },
+  educationSection: {
+    alignItems: "center",
+    marginTop: 30,
+    backgroundColor: "#fff",
+    padding: 20,
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 5,
+    marginBottom: 30,
+  },
+  educationSubtitle: {
+    fontSize: 16,
+    textAlign: "center",
+    color: "#333",
+    marginVertical: 8,
+  },
+  educationDescription: {
+    fontSize: 14,
+    textAlign: "center",
+    color: "#666",
+    marginVertical: 8,
+  },
+  educationImage: {
+    width: 300,
+    height: 200,
+    resizeMode: "contain",
+    marginBottom: 20,
+  },
+  educationButton: {
+    marginVertical: 10,
+    padding: 12,
+    backgroundColor: "#007BFF",
+    borderRadius: 5,
+    width: "80%",
+    alignItems: "center",
+  },
+  educationButtonText: {
+    color: "#FFFFFF",
+    fontSize: 16,
+    fontWeight: "bold",
+  },
+  footer: {
+    alignItems: "center",
+    marginTop: 20,
+    padding: 16,
+  },
+  footerText: {
+    fontSize: 18,
+  },
+  footerLink: {
+    fontSize: 14,
+  },
+});
+
+export default styles;

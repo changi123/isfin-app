@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 import axios from "axios";
 import { useNavigation, useRoute } from "@react-navigation/native";
-// import Swal from "sweetalert2"; // SweetAlert2는 웹에서만 동작하므로 React Native에서 직접 사용할 수 없습니다.
-
+import styles from "../assets/css/Register2Styles";
 function Register2() {
   const route = useRoute();
   const navigation = useNavigation();
@@ -14,6 +13,7 @@ function Register2() {
   const [birthday, setBirthday] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const localIp = "http://192.168.219.70";
 
   const handleConfirm = async () => {
     const data = {
@@ -41,7 +41,7 @@ function Register2() {
 
       try {
         const response = await axios.post(
-          "http://172.30.1.94:8080/parents/createParents", // 백엔드 서버의 주소
+          localIp + ":8080/parents/createParents", // 백엔드 서버의 주소
           data
         );
 
@@ -72,7 +72,7 @@ function Register2() {
       }
       try {
         const response = await axios.post(
-          "http://172.30.1.94:8080/children/createChild", // 백엔드 서버의 주소
+          localIp + ":8080/children/createChild", // 백엔드 서버의 주소
           data
         );
 
@@ -171,58 +171,5 @@ function Register2() {
     </View>
   );
 }
-
-const styles = {
-  container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: "#fff",
-    justifyContent: "center", // 수직 중앙 정렬
-    alignItems: "center", // 수평 중앙 정렬
-  },
-  header: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 20,
-    color: "#00085A",
-  },
-  subHeader: {
-    fontSize: 16,
-    marginBottom: 30,
-    color: "#00085A",
-  },
-  inputBox: {
-    width: "100%", // 화면 너비에 맞추기 위해
-    maxWidth: 400, // 최대 너비 설정 (필요에 따라 조정)
-    marginBottom: 15,
-  },
-  label: {
-    fontSize: 14,
-    color: "#00085A",
-    marginBottom: 5,
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: "#00085A",
-    borderRadius: 10,
-    padding: 10,
-    fontSize: 16,
-  },
-  button: {
-    backgroundColor: "#007bff",
-    borderRadius: 10,
-    paddingVertical: 12,
-    paddingHorizontal: 20,
-    alignItems: "center",
-    width: "100%", // 버튼이 입력란과 같은 너비를 갖도록 설정
-    maxWidth: 400, // 버튼 최대 너비 설정 (필요에 따라 조정)
-    marginTop: 20, // 입력 필드와 버튼 사이 여백
-  },
-  buttonText: {
-    color: "#fff",
-    fontSize: 18,
-    fontWeight: "bold",
-  },
-};
 
 export default Register2;

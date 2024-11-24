@@ -13,11 +13,12 @@ import {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import styles from "../assets/css/IsfinMainStyles";
 const IsfinMain = () => {
   const navigation = useNavigation();
 
   const [user, setUser] = useState(null); // user 상태 관리
-
+  const localIp = "http://192.168.219.70";
   // 로그인 상태 확인 함수
   const checkLogin = async () => {
     const userData = await AsyncStorage.getItem("user");
@@ -83,7 +84,7 @@ const IsfinMain = () => {
     }
     if (user.type === "0") {
       const defaultResponse = await axios.get(
-        `http://172.30.1.94:8080/mission/parents/todayChild/${user.childId}`
+        localIp + `:8080/mission/parents/todayChild/${user.childId}`
       );
 
       // navigation.navigate("MissionPage", {
@@ -99,7 +100,7 @@ const IsfinMain = () => {
       {/* Header */}
       <View style={styles.header}>
         <Image
-          source={require("../assets/main_image1.png")}
+          source={require("../assets/image/main_image1.png")}
           style={styles.headerImage}
         />
         <TouchableOpacity onPress={handleNavigate} style={styles.menuButton}>
@@ -112,7 +113,7 @@ const IsfinMain = () => {
         <Text style={styles.mainTitle}>아이스핀</Text>
         <Text style={styles.subTitle}>우리 아이의 스타트 핀테크</Text>
         <Image
-          source={require("../assets/main_image2.png")}
+          source={require("../assets/image/main_image2.png")}
           style={styles.mainImage}
         />
         <TouchableOpacity onPress={toCardMain} style={styles.cardButton}>
@@ -129,7 +130,7 @@ const IsfinMain = () => {
           아이가 실천하며 보상이 주어져요!{"\n"}
         </Text>
         <Image
-          source={require("../assets/main_image3.png")}
+          source={require("../assets/image/main_image3.png")}
           style={styles.missionImage}
         />
         <TouchableOpacity onPress={handleSelect} style={styles.missionButton}>
@@ -147,7 +148,7 @@ const IsfinMain = () => {
           우리 아이의 경제 교육을 퀴즈와 유익한 동영상으로 시작해요.
         </Text>
         <Image
-          source={require("../assets/main_image4.png")}
+          source={require("../assets/image/main_image4.png")}
           style={styles.educationImage}
         />
         <TouchableOpacity onPress={checkQuiz} style={styles.educationButton}>
@@ -174,172 +175,5 @@ const IsfinMain = () => {
     </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexGrow: 1,
-    padding: 50,
-    backgroundColor: "#f7f8fa", // 배경 색상
-  },
-  header: {
-    alignItems: "center",
-    marginBottom: 20,
-  },
-  headerImage: {
-    width: 110,
-    height: 160,
-    borderRadius: 10, // 이미지 둥글게
-    marginTop: 30, // 이미지 위에 여백을 추가하여 아래로 내림
-  },
-  menuButton: {
-    position: "absolute",
-    right: 10,
-    top: -50,
-  },
-  mainContent: {
-    alignItems: "center",
-    marginTop: 30,
-    backgroundColor: "#fff",
-    padding: 20,
-    borderRadius: 10,
-    shadowColor: "#000",
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
-    elevation: 5, // 그림자 효과 추가
-    marginBottom: 30,
-  },
-  mainTitle: {
-    fontSize: 26,
-    fontWeight: "bold",
-    color: "#333",
-  },
-  subTitle: {
-    fontSize: 18,
-    color: "#777",
-    marginVertical: 5,
-  },
-  mainImage: {
-    width: "90%",
-    height: 200,
-    borderRadius: 10,
-    resizeMode: "cover",
-  },
-  cardButton: {
-    marginVertical: 20,
-    padding: 15,
-    backgroundColor: "#007BFF",
-    borderRadius: 10,
-    width: "80%",
-    alignItems: "center",
-  },
-  cardButtonText: {
-    color: "#FFFFFF",
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  missionSection: {
-    alignItems: "center",
-    marginTop: 30,
-    backgroundColor: "#fff",
-    padding: 20,
-    borderRadius: 10,
-    shadowColor: "#000",
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
-    elevation: 5, // 그림자 효과 추가
-    marginBottom: 30,
-  },
-  sectionTitle: {
-    fontSize: 22,
-    fontWeight: "bold",
-    color: "#333",
-  },
-  missionSubtitle: {
-    fontSize: 16,
-    textAlign: "center",
-    color: "#555",
-    marginVertical: 8,
-  },
-  missionDescription: {
-    fontSize: 14,
-    textAlign: "center",
-    color: "#666",
-    marginVertical: 10,
-    // backgroundColor: "red",
-  },
-  missionImage: {
-    width: 250,
-    height: 150,
-    resizeMode: "contain",
-    marginVertical: 10,
-    // backgroundColor: "red",
-  },
-  missionButton: {
-    padding: 12,
-    backgroundColor: "#007BFF",
-    borderRadius: 5,
-    width: "80%",
-    alignItems: "center",
-    marginTop: 10,
-  },
-  missionButtonText: {
-    color: "#FFFFFF",
-    fontSize: 16,
-  },
-  educationSection: {
-    alignItems: "center",
-    marginTop: 30,
-    backgroundColor: "#fff",
-    padding: 20,
-    borderRadius: 10,
-    shadowColor: "#000",
-    shadowOpacity: 0.1,
-    shadowRadius: 5,
-    elevation: 5, // 그림자 효과 추가
-    marginBottom: 30,
-  },
-  educationSubtitle: {
-    fontSize: 16,
-    textAlign: "center",
-    color: "#333",
-    marginVertical: 8,
-  },
-  educationDescription: {
-    fontSize: 14,
-    textAlign: "center",
-    color: "#666",
-    marginVertical: 8,
-  },
-  educationImage: {
-    width: 300,
-    height: 200,
-    resizeMode: "contain",
-    marginBottom: 20,
-  },
-  educationButton: {
-    marginVertical: 10,
-    padding: 12,
-    backgroundColor: "#007BFF",
-    borderRadius: 5,
-    width: "80%",
-    alignItems: "center",
-  },
-  educationButtonText: {
-    color: "#FFFFFF",
-    fontSize: 16,
-    fontWeight: "bold",
-  },
-  footer: {
-    alignItems: "center",
-    marginTop: 20,
-    padding: 16,
-  },
-  footerText: {
-    fontSize: 18,
-  },
-  footerLink: {
-    fontSize: 14,
-  },
-});
 
 export default IsfinMain;

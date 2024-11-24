@@ -11,7 +11,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
-
+import styles from "../assets/css/CardRegisterStyles";
 function CardRegister(props) {
   const navigation = useNavigation();
   const { cardInfo } = props.route.params;
@@ -23,7 +23,7 @@ function CardRegister(props) {
   const [emptyNotification, setEmptyNotification] = useState(false);
   const [cntClick, setcntClick] = useState(0);
   const [cardImage, setCardImage] = useState(null);
-
+  const localIp = "http://192.168.219.70";
   useEffect(() => {
     AsyncStorage.getItem("user").then((userData) => {
       if (userData === null) {
@@ -100,7 +100,7 @@ function CardRegister(props) {
       setEmptyNotification(true);
     } else {
       axios
-        .get(`http://172.30.1.94:8080/cards/child/${childId}`)
+        .get(localIp + `:8080/cards/child/${childId}`)
         .then((res) => {
           console.log(res.data);
           if (res.data === "") {
@@ -189,106 +189,5 @@ function CardRegister(props) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#f8f8f8",
-    padding: 20,
-  },
-  header: {
-    fontSize: 24,
-    fontWeight: "bold",
-    color: "#00085A",
-    marginBottom: 20,
-    textAlign: "center",
-  },
-  cardName: {
-    fontSize: 18,
-    fontWeight: "600",
-    color: "#00085A",
-    textAlign: "center",
-    marginBottom: 10,
-  },
-  cardImageBox: {
-    alignItems: "center",
-    marginBottom: 20,
-  },
-  cardImage: {
-    width: 200,
-    height: 120,
-    resizeMode: "contain",
-  },
-  registerBackground: {
-    backgroundColor: "#fff",
-    borderRadius: 10,
-    padding: 20,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
-  },
-  registerBody: {
-    marginBottom: 20,
-  },
-  registerTop: {
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "#00085A",
-    marginBottom: 20,
-    textAlign: "center",
-  },
-  registerInputBox: {
-    marginBottom: 15,
-  },
-  registerSubTitle: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#00085A",
-    marginBottom: 5,
-  },
-  registerIdCheckBox: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  registerIdInput: {
-    height: 40,
-    borderColor: "#ccc",
-    borderWidth: 1,
-    borderRadius: 5,
-    paddingLeft: 10,
-    flex: 1,
-    marginRight: 10,
-  },
-  registerIdCheckButton: {
-    backgroundColor: "#007bff",
-    color: "#fff",
-  },
-  registerInput: {
-    height: 40,
-    borderColor: "#ccc",
-    borderWidth: 1,
-    borderRadius: 5,
-    paddingLeft: 10,
-    marginBottom: 5,
-  },
-  registerEmptyId: {
-    color: "red",
-    fontSize: 12,
-  },
-  registerIdCheckWrong: {
-    color: "red",
-    fontSize: 12,
-  },
-  registerSubmitButtonBox: {
-    marginTop: 20,
-  },
-  registerSubmitButton: {
-    backgroundColor: "#007bff",
-    color: "#fff",
-    padding: 10,
-    borderRadius: 5,
-  },
-});
 
 export default CardRegister;

@@ -10,7 +10,6 @@ import {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 import { useNavigation } from "@react-navigation/native";
-
 function Account(props) {
   const [accountNumber, setAccountNumber] = useState("");
   const [autopayDate, setAutopayDate] = useState("");
@@ -19,6 +18,9 @@ function Account(props) {
   const navigation = useNavigation();
   const user = AsyncStorage.getItem("user");
   const { cardData } = props.route.params;
+
+  const localIp = "http://192.168.219.70";
+
   useEffect(() => {
     AsyncStorage.getItem("user").then((user) => {
       if (user === null) {
