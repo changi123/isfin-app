@@ -27,8 +27,6 @@ function MissionPage({ navigation, route }) {
     "../assets/image/3rank.png": require("../assets/image/3rank.png"),
   };
 
-  console.log(child.rank.image);
-
   //   console.log(child.rank.image);
   const [select, setSelect] = useState(child?.childId || "");
 
