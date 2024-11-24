@@ -72,6 +72,7 @@ const IsfinMain = () => {
   const handleSelect = async () => {
     // AsyncStorage에서 사용자 정보 확인
     const user = JSON.parse(await AsyncStorage.getItem("user"));
+    console.log("handleSelect start");
 
     // 비로그인
     if (user === null) {
@@ -86,12 +87,47 @@ const IsfinMain = () => {
       const defaultResponse = await axios.get(
         localIp + `:8080/mission/parents/todayChild/${user.childId}`
       );
-
+      console.log(defaultResponse.data);
       // navigation.navigate("MissionPage", {
       //   childList: [user],
       //   defaultResponse: defaultResponse.data,
       // });
     } else {
+      // 부모가 클릭
+      try {
+        const response = await axios.get(
+          localIp + `:8080/mission/parents/${user.parentId}`
+        );
+
+        if (response.data.length === 0) {
+          // 아이가 없는 경우
+          Alert.alert(
+            "알림",
+            "카드 발급을 먼저 해주세요.",
+            [
+              {
+                text: "확인",
+                onPress: () => {
+                  console.log("카드 발급 필요");
+                },
+              },
+            ],
+            { cancelable: false }
+          );
+        }
+        // const childList = response.data;
+        // console.log(response.data[0]);
+        const defaultResponse = await axios.get(
+          localIp +
+            `:8080/mission/parents/todayChild/${response.data[0].childId}`
+        );
+        // console.log(defaultResponse);
+
+        navigation.navigate("MissionPage", {
+          childList: response.data,
+          defaultResponse: defaultResponse.data,
+        });
+      } catch (error) {}
     }
   };
 
