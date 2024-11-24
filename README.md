@@ -37,4 +37,11 @@
 <br/>
 
 
+# 24.11.24
+## 미션 페이지-부모 ( 미션 조회 + 미션 등록 )
+| ![image1](https://github.com/user-attachments/assets/2fd5c110-1fce-4ad7-88e9-e2d9d94e2590) | ![image2](https://github.com/user-attachments/assets/27d60a52-654e-462a-9297-4eb9da66596f) | !
+|---|---|---|
+<br/>
+
+
 
