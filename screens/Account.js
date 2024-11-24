@@ -82,6 +82,7 @@ function Account(props) {
   const insertCard = async () => {
     console.log("insertCard start");
     const user = JSON.parse(await AsyncStorage.getItem("user"));
+
     if (
       accountNumber === "" ||
       autopayDate === "" ||
@@ -106,7 +107,7 @@ function Account(props) {
 
       try {
         const response = await axios.post(
-          `http://172.30.1.94:8080/cards?parentId=${parentId}`,
+          localIp + `:8080/cards?parentId=${parentId}`,
           card
         );
         // console.log(response.data);
