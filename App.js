@@ -13,6 +13,7 @@ import CardRegister from "./screens/CardRegister";
 import CardRegisterInfo from "./screens/CardRegisterInfo";
 import Account from "./screens/Account";
 import MissionPage from "./screens/MissionPage";
+import MissionMake from "./screens/MissionMake";
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -69,6 +70,11 @@ export default function App() {
           <Stack.Screen
             name="MissionPage"
             component={MissionPage}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="MissionMake"
+            component={MissionMake}
             options={{ headerShown: false }}
           />
           {/* 다른 스크린들 */}

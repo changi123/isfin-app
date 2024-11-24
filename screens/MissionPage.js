@@ -44,7 +44,10 @@ function MissionPage({ navigation, route }) {
   const handleButtonClick = async () => {
     console.log("handleButtonClick start");
     try {
-      const response = await axios.get("/mission/parents");
+      const response = await axios.get(
+        localIp + `:8080/mission/parents/${user.parentId}`
+      );
+
       const childList = response.data;
       navigation.navigate("MissionMake", { child, childList });
     } catch (error) {
@@ -137,9 +140,9 @@ function MissionPage({ navigation, route }) {
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>오늘의 미션</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button} onPress={handleHistory}>
+        {/* <TouchableOpacity style={styles.button} onPress={handleHistory}>
           <Text style={styles.buttonText}>이전 미션 내역</Text>
-        </TouchableOpacity>
+        </TouchableOpacity> */}
       </View>
       {user?.type === "0" ? (
         <View style={styles.childButton}>
