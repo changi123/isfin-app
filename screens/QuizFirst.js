@@ -69,7 +69,7 @@ const QuizFirst = () => {
       }
     }
 
-    // navigation.navigate("QuizSecond"); // 다음 문제로 이동
+    navigation.navigate("QuizSecond"); // 다음 문제로 이동
   };
 
   useEffect(() => {
