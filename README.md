@@ -58,5 +58,9 @@
 -> 리워드가 잘 지급 된 것 확인
 <br/>
 
+# 24.11.25
+## 미션 페이지-부모 ( 미션 조회 + 미션 등록 )
+<img src="https://github.com/user-attachments/assets/63774bb3-2d63-420c-9033-2d7fc24ba2ae" width="300"> 
 
+</br>
 
