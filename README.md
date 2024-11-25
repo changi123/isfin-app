@@ -60,10 +60,14 @@
 
 # 24.11.25
 ## 미션 페이지-아이 ( 미션 조회 )
+
 <img src="https://github.com/user-attachments/assets/63774bb3-2d63-420c-9033-2d7fc24ba2ae" width="300"> 
 <br>
+
 ## 퀴즈 페이지 ( 퀴즈 시작 페이지 + 부모 접근 불가 )
+
 <img src="https://github.com/user-attachments/assets/4bf08c54-cd68-40ec-a4ff-54a296dfafe3" width="300"> 
 <img src="https://github.com/user-attachments/assets/de018c0d-60d7-4c2b-9f3c-cfed4f38a23e" width="300"> 
+
 </br>
 
