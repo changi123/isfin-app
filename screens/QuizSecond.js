@@ -10,10 +10,12 @@ import {
   BackHandler,
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 
 function QuizSecond(props) {
   const localIp = "http://172.30.1.1";
+  const navigation = useNavigation();
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [imageSrc, setImageSrc] = useState(
     require("../assets/image/quiz_image3.png")
@@ -28,6 +30,8 @@ function QuizSecond(props) {
   };
 
   const closeModal = () => {
+    console.log("closeModal start");
+
     setModalIsOpen(false);
   };
 
@@ -58,6 +62,14 @@ function QuizSecond(props) {
       imageSrc2 === require("../assets/image/quiz_image4.png")
     ) {
       setIsCorrectAnswer(false);
+      Alert.alert("😊정답입니다😊", "", [
+        {
+          text: "확인",
+          onPress: () => {
+            navigation.navigate("QuizThird");
+          },
+        },
+      ]);
       try {
         await axios.post(localIp + ":8080/quizhistory/insert", null, {
           params: { quizNumber: 2, submitresult: true, childId: childId },
@@ -67,6 +79,14 @@ function QuizSecond(props) {
       }
     } else {
       setIsCorrectAnswer(true);
+      Alert.alert("😊정답입니다😊", "", [
+        {
+          text: "확인",
+          onPress: () => {
+            navigation.navigate("QuizThird");
+          },
+        },
+      ]);
       try {
         await axios.post(localIp + ":8080/quizhistory/insert", null, {
           params: { quizNumber: 2, submitresult: true, childId: childId },
@@ -75,7 +95,8 @@ function QuizSecond(props) {
         console.error(error);
       }
     }
-    openModal();
+
+    // openModal();
   };
 
   const [isBackButtonClicked, setIsBackButtonClicked] = useState(false);

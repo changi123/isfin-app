@@ -46,10 +46,17 @@ const QuizFirst = () => {
     console.log("checkAnswer start");
     const user = await AsyncStorage.getItem("user");
     const childId = JSON.parse(user).childId;
+
     if (imageSrc === require("../assets/image/quiz_image1.png")) {
       setIsCorrectAnswer(true);
-      Alert.alert("😊정답입니다😊");
-      // 서버 API 호출
+      Alert.alert("😊정답입니다😊", "", [
+        {
+          text: "확인",
+          onPress: () => {
+            navigation.navigate("QuizSecond");
+          },
+        },
+      ]);
       try {
         await axios.post(localIp + ":8080/quizhistory/insert", null, {
           params: { quizNumber: 1, submitresult: true, childId: childId },
@@ -59,7 +66,14 @@ const QuizFirst = () => {
       }
     } else {
       setIsCorrectAnswer(false);
-      Alert.alert("😢오답입니다😢");
+      Alert.alert("😢오답입니다😢", "", [
+        {
+          text: "확인",
+          onPress: () => {
+            navigation.navigate("QuizSecond");
+          },
+        },
+      ]);
       try {
         await axios.post(localIp + ":8080/quizhistory/insert", null, {
           params: { quizNumber: 1, submitresult: false, childId: childId },
@@ -68,8 +82,6 @@ const QuizFirst = () => {
         console.error(error);
       }
     }
-
-    navigation.navigate("QuizSecond"); // 다음 문제로 이동
   };
 
   useEffect(() => {

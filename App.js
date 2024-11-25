@@ -17,6 +17,7 @@ import MissionMake from "./screens/MissionMake";
 import QuizMain from "./screens/QuizMain";
 import QuizFirst from "./screens/QuizFirst";
 import QuizSecond from "./screens/QuizSecond";
+import QuizThird from "./screens/QuizThird";
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -93,6 +94,11 @@ export default function App() {
           <Stack.Screen
             name="QuizSecond"
             component={QuizSecond}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="QuizThird"
+            component={QuizThird}
             options={{ headerShown: false }}
           />
           {/* 다른 스크린들 */}
