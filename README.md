@@ -69,5 +69,16 @@
 <img src="https://github.com/user-attachments/assets/4bf08c54-cd68-40ec-a4ff-54a296dfafe3" width="300"> 
 <img src="https://github.com/user-attachments/assets/de018c0d-60d7-4c2b-9f3c-cfed4f38a23e" width="300"> 
 
+## 퀴즈 각 화면
+
+<img src="https://github.com/user-attachments/assets/18d96351-6e0d-443e-a59d-1412689f9879" width="300"> 
+<img src="https://github.com/user-attachments/assets/c4cb43dd-cdd5-4f3a-8946-323cf6ae201f" width="300"> 
+<img src="https://github.com/user-attachments/assets/f68be4b7-a727-436a-98dc-223a16623f6a" width="300"> 
+
+## 퀴즈 각 화면 ( 정답 확인 )
+<img src="https://github.com/user-attachments/assets/f5d92517-46df-4056-95d2-7330ad0d8a83" width="300"> 
+<img src="https://github.com/user-attachments/assets/07d4931a-6a9a-4ba5-9405-09f1834aacd3" width="300"> 
+<img src="https://github.com/user-attachments/assets/9e0a599d-8ece-4c79-ac14-5e4e7bf3ca37" width="300"> 
+
 </br>
 
