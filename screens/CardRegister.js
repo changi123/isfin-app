@@ -23,7 +23,7 @@ function CardRegister(props) {
   const [emptyNotification, setEmptyNotification] = useState(false);
   const [cntClick, setcntClick] = useState(0);
   const [cardImage, setCardImage] = useState(null);
-  const localIp = "http://192.168.219.70";
+  const localIp = "http://172.30.1.1";
   useEffect(() => {
     AsyncStorage.getItem("user").then((userData) => {
       if (userData === null) {

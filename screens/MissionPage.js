@@ -20,7 +20,7 @@ function MissionPage({ navigation, route }) {
     route.params.defaultResponse || {}
   );
   const [child, setChild] = useState(childList[0]);
-  const localIp = "http://192.168.219.70";
+  const localIp = "http://172.30.1.1";
   const imageMapper = {
     "../assets/image/1rank.png": require("../assets/image/1rank.png"),
     "../assets/image/2rank.png": require("../assets/image/2rank.png"),

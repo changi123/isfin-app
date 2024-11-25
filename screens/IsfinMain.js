@@ -18,7 +18,7 @@ const IsfinMain = () => {
   const navigation = useNavigation();
 
   const [user, setUser] = useState(null); // user 상태 관리
-  const localIp = "http://192.168.219.70";
+  const localIp = "http://172.30.1.1";
   // 로그인 상태 확인 함수
   const checkLogin = async () => {
     const userData = await AsyncStorage.getItem("user");
@@ -88,10 +88,10 @@ const IsfinMain = () => {
         localIp + `:8080/mission/parents/todayChild/${user.childId}`
       );
       console.log(defaultResponse.data);
-      // navigation.navigate("MissionPage", {
-      //   childList: [user],
-      //   defaultResponse: defaultResponse.data,
-      // });
+      navigation.navigate("MissionPage", {
+        childList: [user],
+        defaultResponse: defaultResponse.data,
+      });
     } else {
       // 부모가 클릭
       try {

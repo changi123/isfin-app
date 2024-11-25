@@ -19,7 +19,7 @@ function Account(props) {
   const user = AsyncStorage.getItem("user");
   const { cardData } = props.route.params;
 
-  const localIp = "http://192.168.219.70";
+  const localIp = "http://172.30.1.1";
 
   useEffect(() => {
     AsyncStorage.getItem("user").then((user) => {

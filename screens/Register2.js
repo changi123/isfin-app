@@ -13,7 +13,7 @@ function Register2() {
   const [birthday, setBirthday] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const localIp = "http://192.168.219.70";
+  const localIp = "http://172.30.1.1";
 
   const handleConfirm = async () => {
     const data = {

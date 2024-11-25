@@ -21,7 +21,7 @@ function MissionMake() {
   const [rewardMoney, setRewardMoney] = useState("");
   const [child, setChild] = useState(route.params.child);
   const childList = route.params.childList;
-  const localIp = "http://192.168.219.70";
+  const localIp = "http://172.30.1.1";
   const getCurrentDate = () => {
     const currentDate = new Date();
     const month = currentDate.getMonth() + 1;

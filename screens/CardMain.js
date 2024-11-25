@@ -16,7 +16,7 @@ function CardMain() {
   const navigation = useNavigation();
   const [cardList, setCardList] = useState([]);
   const [checkUser, setCheckUser] = useState(null);
-  const localIp = "http://192.168.219.70";
+  const localIp = "http://172.30.1.1";
   const imageMap = {
     "card1.png": require("../assets/image/card1.png"),
     "card2.png": require("../assets/image/card2.png"),
