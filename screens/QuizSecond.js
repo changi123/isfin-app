@@ -193,64 +193,110 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   header: {
+    // backgroundColor: "#007BFF",
+    // width: "100%",
+    // paddingVertical: 25, // 높이 증가
+    // alignItems: "center",
     backgroundColor: "#007BFF",
     width: "100%",
-    paddingVertical: 25, // 높이 증가
+    paddingVertical: 30,
     alignItems: "center",
+    justifyContent: "center",
+    elevation: 5,
   },
   headerText: {
-    fontSize: 22, // 글자 크기 증가
+    // fontSize: 22, // 글자 크기 증가
+    // fontWeight: "bold",
+    // color: "#fff",
+    fontSize: 24,
     fontWeight: "bold",
     color: "#fff",
+    textAlign: "center",
   },
   content: {
+    // alignItems: "center",
+    // marginTop: 30, // 여백 증가
     alignItems: "center",
-    marginTop: 30, // 여백 증가
+    marginTop: 40,
+    paddingHorizontal: 15,
   },
   questionNumber: {
-    fontSize: 20, // 글자 크기 증가
+    // fontSize: 20, // 글자 크기 증가
+    // fontWeight: "bold",
+    // marginBottom: 15, // 여백 증가
+    fontSize: 22,
     fontWeight: "bold",
-    marginBottom: 15, // 여백 증가
+    marginBottom: 20,
+    color: "#333",
   },
   questionText: {
-    fontSize: 18, // 글자 크기 증가
+    // fontSize: 18, // 글자 크기 증가
+    // textAlign: "center",
+    // marginBottom: 25, // 여백 증가
+    // paddingHorizontal: 20, // 좌우 여백 추가
+    fontSize: 18,
     textAlign: "center",
-    marginBottom: 25, // 여백 증가
-    paddingHorizontal: 20, // 좌우 여백 추가
+    marginBottom: 30,
+    paddingHorizontal: 30,
+    color: "#555",
   },
   imageContainer: {
+    // flexDirection: "row",
+    // justifyContent: "center",
+    // marginBottom: 25, // 여백 증가
     flexDirection: "row",
     justifyContent: "center",
-    marginBottom: 25, // 여백 증가
+    marginBottom: 30,
   },
   quizImage: {
+    // width: 160, // 크기 증가
+    // height: 160, // 크기 증가
+    // margin: 12, // 여백 증가
+    // borderRadius: 8, // 이미지 모서리 둥글게
+    // // borderWidth: 2, // 경계선 추가
+    // borderColor: "#ddd", // 경계선 색상
     width: 160, // 크기 증가
     height: 160, // 크기 증가
-    margin: 12, // 여백 증가
-    borderRadius: 8, // 이미지 모서리 둥글게
-    // borderWidth: 2, // 경계선 추가
-    borderColor: "#ddd", // 경계선 색상
+    margin: 15,
+    borderRadius: 10,
+    borderColor: "#ddd",
   },
   imageHint: {
-    width: 110, // 크기 증가
-    height: 110, // 크기 증가
+    // width: 110, // 크기 증가
+    // height: 110, // 크기 증가
+    // marginTop: 20,
+    // borderRadius: 8, // 이미지 모서리 둥글게
+    // // borderWidth: 2, // 경계선 추가
+    // borderColor: "#ddd", // 경계선 색상
+    width: 100,
+    height: 100,
     marginTop: 20,
-    borderRadius: 8, // 이미지 모서리 둥글게
-    // borderWidth: 2, // 경계선 추가
-    borderColor: "#ddd", // 경계선 색상
   },
   button: {
+    // backgroundColor: "#007BFF",
+    // paddingVertical: 18, // 버튼 높이 감소
+    // paddingHorizontal: 50, // 버튼 좌우 여백 증가
+    // borderRadius: 10, // 버튼 모서리 둥글게
+    // marginTop: 40, // 여백 증가
+    // alignItems: "center",
+    // elevation: 5, // 그림자 효과 추가
     backgroundColor: "#007BFF",
-    paddingVertical: 18, // 버튼 높이 감소
-    paddingHorizontal: 50, // 버튼 좌우 여백 증가
-    borderRadius: 10, // 버튼 모서리 둥글게
-    marginTop: 40, // 여백 증가
+    paddingVertical: 20,
+    paddingHorizontal: 60,
+    borderRadius: 12,
+    marginTop: 50,
     alignItems: "center",
-    elevation: 5, // 그림자 효과 추가
+    elevation: 5,
   },
   buttonText: {
+    // color: "#fff",
+    // fontSize: 20, // 글자 크기 증가
+    // fontWeight: "bold",
+    // color: "#fff",
+    // fontSize: 18, // 글자 크기 조정
+    // fontWeight: "bold",
     color: "#fff",
-    fontSize: 20, // 글자 크기 증가
+    fontSize: 22,
     fontWeight: "bold",
   },
   modalContainer: {

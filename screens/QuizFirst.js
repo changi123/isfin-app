@@ -146,40 +146,70 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   header: {
+    // backgroundColor: "#007BFF",
+    // width: "100%",
+    // padding: 20,
+    // alignItems: "center",
     backgroundColor: "#007BFF",
     width: "100%",
-    padding: 20,
+    paddingVertical: 30,
     alignItems: "center",
+    justifyContent: "center",
+    elevation: 5,
   },
   headerText: {
-    fontSize: 20,
+    // fontSize: 20,
+    // fontWeight: "bold",
+    // color: "#fff",
+    fontSize: 24,
     fontWeight: "bold",
     color: "#fff",
+    textAlign: "center",
   },
   content: {
+    // alignItems: "center",
+    // marginTop: 20,
     alignItems: "center",
-    marginTop: 20,
+    marginTop: 40,
+    paddingHorizontal: 15,
   },
   questionNumber: {
-    fontSize: 18,
+    // fontSize: 18,
+    // fontWeight: "bold",
+    // marginBottom: 10,
+    fontSize: 22,
     fontWeight: "bold",
-    marginBottom: 10,
+    marginBottom: 20,
+    color: "#333",
   },
   questionText: {
-    fontSize: 16,
+    // fontSize: 16,
+    // textAlign: "center",
+    // marginBottom: 20,
+    fontSize: 18,
     textAlign: "center",
-    marginBottom: 20,
+    marginBottom: 30,
+    paddingHorizontal: 30,
+    color: "#555",
   },
   // 이미지들을 수평으로 정렬하는 컨테이너
   imageContainer: {
+    // flexDirection: "row",
+    // justifyContent: "center",
+    // marginBottom: 20,
     flexDirection: "row",
     justifyContent: "center",
-    marginBottom: 20,
+    marginBottom: 30,
   },
   quizImage: {
-    width: 150,
-    height: 150,
-    margin: 10,
+    // width: 150,
+    // height: 150,
+    // margin: 10,
+    width: 160, // 크기 증가
+    height: 160, // 크기 증가
+    margin: 15,
+    borderRadius: 10,
+    borderColor: "#ddd",
   },
   imageHint: {
     width: 100,
@@ -188,16 +218,26 @@ const styles = StyleSheet.create({
   },
   // 버튼을 더 크게 만든 스타일
   button: {
+    // backgroundColor: "#007BFF",
+    // paddingVertical: 20, // 높이를 키움
+    // paddingHorizontal: 40, // 좌우 여백을 키움
+    // borderRadius: 5,
+    // marginTop: 30,
+    // alignItems: "center",
     backgroundColor: "#007BFF",
-    paddingVertical: 20, // 높이를 키움
-    paddingHorizontal: 40, // 좌우 여백을 키움
-    borderRadius: 5,
-    marginTop: 30,
+    paddingVertical: 20,
+    paddingHorizontal: 60,
+    borderRadius: 12,
+    marginTop: 50,
     alignItems: "center",
+    elevation: 5,
   },
   buttonText: {
+    // color: "#fff",
+    // fontSize: 18, // 글자 크기 조정
+    // fontWeight: "bold",
     color: "#fff",
-    fontSize: 18, // 글자 크기 조정
+    fontSize: 22,
     fontWeight: "bold",
   },
 });
