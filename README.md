@@ -1,4 +1,4 @@
-#  🚗 이전 아이스핀 ( ISFIN ) 리액트 프로젝트 -> 리액트 네이티브 + 안드로이드 스튜디오 프로젝트로 변환하기 
+![image](https://github.com/user-attachments/assets/0a4fb0e8-0297-4229-a0d4-ee8bb4e940fc)#  🚗 이전 아이스핀 ( ISFIN ) 리액트 프로젝트 -> 리액트 네이티브 + 안드로이드 스튜디오 프로젝트로 변환하기 
 <br/>
 
 # ✔ 24.11.13
@@ -71,14 +71,15 @@
 
 ## 퀴즈 각 화면
 
-<img src="https://github.com/user-attachments/assets/18d96351-6e0d-443e-a59d-1412689f9879" width="300"> 
-<img src="https://github.com/user-attachments/assets/c4cb43dd-cdd5-4f3a-8946-323cf6ae201f" width="300"> 
-<img src="https://github.com/user-attachments/assets/f68be4b7-a727-436a-98dc-223a16623f6a" width="300"> 
+<img src="https://github.com/user-attachments/assets/d15d1dc0-cefa-4890-9e74-e2bf9dee6581" width="300"> 
+<img src="https://github.com/user-attachments/assets/e64dc5de-83ad-4a0a-b668-5376db4c7554" width="300"> 
+<img src="https://github.com/user-attachments/assets/814eab89-9c87-4041-9e10-71b69a7e2b2c" width="300"> 
+
 
 ## 퀴즈 각 화면 ( 정답 확인 )
-<img src="https://github.com/user-attachments/assets/f5d92517-46df-4056-95d2-7330ad0d8a83" width="300"> 
-<img src="https://github.com/user-attachments/assets/07d4931a-6a9a-4ba5-9405-09f1834aacd3" width="300"> 
-<img src="https://github.com/user-attachments/assets/9e0a599d-8ece-4c79-ac14-5e4e7bf3ca37" width="300"> 
+<img src="https://github.com/user-attachments/assets/df998b50-a819-4439-9a6b-0bae79ec94d9" width="300"> 
+<img src="https://github.com/user-attachments/assets/bc9832dc-07b4-4679-8cde-01c9872ef5b4" width="300"> 
+<img src="https://github.com/user-attachments/assets/c124d685-1d32-44ef-90ce-22f56f077c8e" width="300"> 
 
 </br>
 
