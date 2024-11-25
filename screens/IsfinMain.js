@@ -61,8 +61,22 @@ const IsfinMain = () => {
     navigation.navigate("card");
   };
   // 퀴즈
-  const checkQuiz = () => {
-    // Navigate to quiz page
+  const checkQuiz = async () => {
+    console.log("checkQuiz start");
+    try {
+      if (user.type === "0") {
+        const response = await axios.get(
+          localIp + `:8080/points/quizpoints/${user.childId}`
+        );
+        const points_quiz = response.data;
+        // console.log("points_quiz : ", points_quiz);
+        navigation.navigate("QuizMain", { state: { points_quiz } });
+      } else {
+        navigation.navigate("QuizMain");
+      }
+    } catch (error) {
+      console.error("로그인 안됨", error);
+    }
   };
   // 동영상
   const checkVideo = () => {
