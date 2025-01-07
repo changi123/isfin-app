@@ -13,7 +13,7 @@ function Register2() {
   const [birthday, setBirthday] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const localIp = "http://172.30.1.1";
+  const localIp = "https://eleven-peaches-raise.loca.lt";
 
   const handleConfirm = async () => {
     const data = {
@@ -41,7 +41,7 @@ function Register2() {
 
       try {
         const response = await axios.post(
-          localIp + ":8080/parents/createParents", // 백엔드 서버의 주소
+          localIp + "/parents/createParents", // 백엔드 서버의 주소
           data
         );
 
@@ -72,7 +72,7 @@ function Register2() {
       }
       try {
         const response = await axios.post(
-          localIp + ":8080/children/createChild", // 백엔드 서버의 주소
+          localIp + "/children/createChild", // 백엔드 서버의 주소
           data
         );
 

@@ -16,7 +16,7 @@ function CardMain() {
   const navigation = useNavigation();
   const [cardList, setCardList] = useState([]);
   const [checkUser, setCheckUser] = useState(null);
-  const localIp = "http://172.30.1.1";
+  const localIp = "https://eleven-peaches-raise.loca.lt";
   const imageMap = {
     "card1.png": require("../assets/image/card1.png"),
     "card2.png": require("../assets/image/card2.png"),
@@ -34,7 +34,7 @@ function CardMain() {
 
     // 카드 목록 요청
     axios
-      .get(localIp + ":8080/card-list")
+      .get(localIp + "/card-list")
       .then((res) => {
         setCardList(res.data);
         // console.log(res.data);
@@ -47,7 +47,7 @@ function CardMain() {
   const handleCardRegister = (cardId) => {
     // console.log(cardId);
     axios
-      .get(localIp + `:8080/card-list/detail/${cardId}`)
+      .get(localIp + `/card-list/detail/${cardId}`)
       .then((res) => {
         // console.log(res.data);
         navigation.navigate("CardRegister", { cardInfo: res.data });

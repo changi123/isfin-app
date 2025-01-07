@@ -19,7 +19,7 @@ function CardRegisterInfo(props) {
   const [passwordCheck, setPasswordCheck] = useState(false);
   const [address, setAddress] = useState("");
   const { card } = props.route.params;
-  const localIp = "http://172.30.1.1";
+  const localIp = "https://eleven-peaches-raise.loca.lt";
   const nextPage = async () => {
     if (
       !passwordCheck &&

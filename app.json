@@ -38,6 +38,9 @@
       "minify": false,
       "https": false,
       "lan": true
-    }
+    },
+    "plugins": [
+      "expo-asset"
+    ]
   }
 }

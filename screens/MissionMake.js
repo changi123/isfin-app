@@ -21,7 +21,7 @@ function MissionMake() {
   const [rewardMoney, setRewardMoney] = useState("");
   const [child, setChild] = useState(route.params.child);
   const childList = route.params.childList;
-  const localIp = "http://172.30.1.1";
+  const localIp = "https://eleven-peaches-raise.loca.lt";
   const getCurrentDate = () => {
     const currentDate = new Date();
     const month = currentDate.getMonth() + 1;
@@ -93,11 +93,11 @@ function MissionMake() {
 
     try {
       const response = await axios.post(
-        localIp + ":8080/mission/register",
+        localIp + "/mission/register",
         data
       );
       const defaultResponse = await axios.get(
-        localIp + `:8080/mission/parents/todayChild/${childList[0].childId}`
+        localIp + `/mission/parents/todayChild/${childList[0].childId}`
       );
 
       navigation.navigate("MissionPage", {

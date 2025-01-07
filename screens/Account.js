@@ -19,7 +19,7 @@ function Account(props) {
   const user = AsyncStorage.getItem("user");
   const { cardData } = props.route.params;
 
-  const localIp = "http://172.30.1.1";
+  const localIp = "https://eleven-peaches-raise.loca.lt";
 
   useEffect(() => {
     AsyncStorage.getItem("user").then((user) => {
@@ -107,7 +107,7 @@ function Account(props) {
 
       try {
         const response = await axios.post(
-          localIp + `:8080/cards?parentId=${parentId}`,
+          localIp + `/cards?parentId=${parentId}`,
           card
         );
         // console.log(response.data);

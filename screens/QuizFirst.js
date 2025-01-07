@@ -21,7 +21,7 @@ const QuizFirst = () => {
   );
   const [isCorrectAnswer, setIsCorrectAnswer] = useState(false);
   const [isBackButtonClicked, setIsBackButtonClicked] = useState(false);
-  const localIp = "http://172.30.1.1";
+  const localIp = "https://eleven-peaches-raise.loca.lt";
   const navigation = useNavigation();
 
   const changeImage = () => {
@@ -58,7 +58,7 @@ const QuizFirst = () => {
         },
       ]);
       try {
-        await axios.post(localIp + ":8080/quizhistory/insert", null, {
+        await axios.post(localIp + "/quizhistory/insert", null, {
           params: { quizNumber: 1, submitresult: true, childId: childId },
         });
       } catch (error) {
@@ -75,7 +75,7 @@ const QuizFirst = () => {
         },
       ]);
       try {
-        await axios.post(localIp + ":8080/quizhistory/insert", null, {
+        await axios.post(localIp + "/quizhistory/insert", null, {
           params: { quizNumber: 1, submitresult: false, childId: childId },
         });
       } catch (error) {

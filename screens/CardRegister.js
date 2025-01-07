@@ -23,7 +23,7 @@ function CardRegister(props) {
   const [emptyNotification, setEmptyNotification] = useState(false);
   const [cntClick, setcntClick] = useState(0);
   const [cardImage, setCardImage] = useState(null);
-  const localIp = "http://172.30.1.1";
+  const localIp = "https://eleven-peaches-raise.loca.lt";
   useEffect(() => {
     AsyncStorage.getItem("user").then((userData) => {
       if (userData === null) {
@@ -100,7 +100,7 @@ function CardRegister(props) {
       setEmptyNotification(true);
     } else {
       axios
-        .get(localIp + `:8080/cards/child/${childId}`)
+        .get(localIp + `/cards/child/${childId}`)
         .then((res) => {
           console.log(res.data);
           if (res.data === "") {

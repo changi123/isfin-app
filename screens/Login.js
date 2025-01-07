@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 import styles from "../assets/css/LoginStyles";
 function Login() {
   const navigation = useNavigation();
-  const localIp = "http://172.30.1.1";
+  const localIp = "https://eleven-peaches-raise.loca.lt";
   //   // 로그인 타입 상태
   const [loginType, setLoginType] = useState("parent");
 
@@ -46,7 +46,7 @@ function Login() {
       }
 
       const response = await axios.post(
-        localIp + ":8080/parents/login", // 백엔드 서버의 주소
+        localIp + "/parents/login", // 백엔드 서버의 주소
 
         loginData
       );
@@ -91,7 +91,7 @@ function Login() {
       }
 
       const response = await axios.post(
-        localIp + ":8080/children/login", // 백엔드 서버의 주소
+        localIp + "/children/login", // 백엔드 서버의 주소
         loginData
       );
 

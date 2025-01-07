@@ -20,7 +20,7 @@ function MissionPage({ navigation, route }) {
     route.params.defaultResponse || {}
   );
   const [child, setChild] = useState(childList[0]);
-  const localIp = "http://172.30.1.1";
+  const localIp = "https://eleven-peaches-raise.loca.lt";
   const imageMapper = {
     "../assets/image/1rank.png": require("../assets/image/1rank.png"),
     "../assets/image/2rank.png": require("../assets/image/2rank.png"),
@@ -43,7 +43,7 @@ function MissionPage({ navigation, route }) {
     console.log("handleButtonClick start");
     try {
       const response = await axios.get(
-        localIp + `:8080/mission/parents/${user.parentId}`
+        localIp + `/mission/parents/${user.parentId}`
       );
 
       const childList = response.data;
@@ -61,7 +61,7 @@ function MissionPage({ navigation, route }) {
     setSelect(child.childId);
     try {
       const response = await axios.get(
-        localIp + `:8080/mission/parents/todayChild/${child.childId}`
+        localIp + `/mission/parents/todayChild/${child.childId}`
       );
       setDefaultResponse(response.data);
     } catch (error) {
@@ -75,8 +75,8 @@ function MissionPage({ navigation, route }) {
     try {
       const endpoint =
         user.type === "1"
-          ? localIp + ":8080/mission/parents/history"
-          : localIp + ":8080/mission/child/history";
+          ? localIp + "/mission/parents/history"
+          : localIp + "/mission/child/history";
       const response = await axios.get(endpoint);
       navigation.navigate("MissionHistory", { historyList: response.data });
     } catch (error) {
@@ -98,7 +98,7 @@ function MissionPage({ navigation, route }) {
       parent: user,
     };
     try {
-      await axios.put(localIp + ":8080/mission/parent/update", data);
+      await axios.put(localIp + "/mission/parent/update", data);
       Alert.alert("리워드 적립완료");
     } catch (error) {
       Alert.alert("Error", "Failed to update mission.");

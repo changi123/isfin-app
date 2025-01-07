@@ -13,7 +13,7 @@ import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 function QuizThird() {
-  const localIp = "http://172.30.1.1";
+  const localIp = "https://eleven-peaches-raise.loca.lt";
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [isCorrectAnswer, setIsCorrectAnswer] = useState(false);
   const [isBackButtonClicked, setIsBackButtonClicked] = useState(false);
@@ -48,13 +48,13 @@ function QuizThird() {
       if (imageSrc === require("../assets/image/quiz_image1.png")) {
         console.log("checkAnswer start1");
         setIsCorrectAnswer(true);
-        await axios.post(localIp + ":8080/quizhistory/insert", null, {
+        await axios.post(localIp + "/quizhistory/insert", null, {
           params: { quizNumber: 3, submitresult: true, childId: childId },
         });
       } else {
         console.log("checkAnswer start2");
         setIsCorrectAnswer(false);
-        await axios.post(localIp + ":8080/quizhistory/insert", null, {
+        await axios.post(localIp + "/quizhistory/insert", null, {
           params: { quizNumber: 3, submitresult: true, childId: childId },
         });
       }

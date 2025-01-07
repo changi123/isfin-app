@@ -14,7 +14,7 @@ import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 
 function QuizSecond(props) {
-  const localIp = "http://172.30.1.1";
+  const localIp = "https://eleven-peaches-raise.loca.lt";
   const navigation = useNavigation();
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [imageSrc, setImageSrc] = useState(
@@ -71,7 +71,7 @@ function QuizSecond(props) {
         },
       ]);
       try {
-        await axios.post(localIp + ":8080/quizhistory/insert", null, {
+        await axios.post(localIp + "/quizhistory/insert", null, {
           params: { quizNumber: 2, submitresult: true, childId: childId },
         });
       } catch (error) {
@@ -88,7 +88,7 @@ function QuizSecond(props) {
         },
       ]);
       try {
-        await axios.post(localIp + ":8080/quizhistory/insert", null, {
+        await axios.post(localIp + "/quizhistory/insert", null, {
           params: { quizNumber: 2, submitresult: true, childId: childId },
         });
       } catch (error) {

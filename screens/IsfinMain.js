@@ -18,7 +18,7 @@ const IsfinMain = () => {
   const navigation = useNavigation();
 
   const [user, setUser] = useState(null); // user 상태 관리
-  const localIp = "http://172.30.1.1";
+  const localIp = "https://eleven-peaches-raise.loca.lt";
   // 로그인 상태 확인 함수
   const checkLogin = async () => {
     const userData = await AsyncStorage.getItem("user");
@@ -66,7 +66,7 @@ const IsfinMain = () => {
     try {
       if (user.type === "0") {
         const response = await axios.get(
-          localIp + `:8080/points/quizpoints/${user.childId}`
+          localIp + `/points/quizpoints/${user.childId}`
         );
         const points_quiz = response.data;
         // console.log("points_quiz : ", points_quiz);
@@ -99,7 +99,7 @@ const IsfinMain = () => {
     }
     if (user.type === "0") {
       const defaultResponse = await axios.get(
-        localIp + `:8080/mission/parents/todayChild/${user.childId}`
+        localIp + `/mission/parents/todayChild/${user.childId}`
       );
       console.log(defaultResponse.data);
       navigation.navigate("MissionPage", {
@@ -110,7 +110,7 @@ const IsfinMain = () => {
       // 부모가 클릭
       try {
         const response = await axios.get(
-          localIp + `:8080/mission/parents/${user.parentId}`
+          localIp + `/mission/parents/${user.parentId}`
         );
 
         if (response.data.length === 0) {
@@ -132,8 +132,7 @@ const IsfinMain = () => {
         // const childList = response.data;
         // console.log(response.data[0]);
         const defaultResponse = await axios.get(
-          localIp +
-            `:8080/mission/parents/todayChild/${response.data[0].childId}`
+          localIp + `/mission/parents/todayChild/${response.data[0].childId}`
         );
         // console.log(defaultResponse);
 
