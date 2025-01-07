@@ -39,8 +39,6 @@
       "https": false,
       "lan": true
     },
-    "plugins": [
-      "expo-asset"
-    ]
+    "plugins": ["expo-asset"]
   }
 }

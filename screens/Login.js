@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 import styles from "../assets/css/LoginStyles";
 function Login() {
   const navigation = useNavigation();
-  const localIp = "https://eleven-peaches-raise.loca.lt";
+  const localIp = "https://free-maps-build.loca.lt";
   //   // 로그인 타입 상태
   const [loginType, setLoginType] = useState("parent");
 
@@ -67,7 +67,7 @@ function Login() {
     } catch (error) {
       // 로그인 실패 후의 처리
       Alert.alert(
-        "로그인 실패",
+        "로그인 실패1",
         "서버 오류가 발생했습니다. 다시 시도해주세요."[
           { text: "확인", onPress: () => console.log("확인 클릭") }
         ]
